@@ -14,7 +14,7 @@
     <head>
         <!-- Basic Page Info -->
         <meta charset="utf-8" />
-        <title>Admin CBU Sites</title>
+        <title>Admin</title>
 
         <!-- Site favicon -->
         <link rel="apple-touch-icon" sizes="180x180"
@@ -94,7 +94,7 @@
     <div class="left-side-bar">
         <div class="brand-logo">
             <a href="/" class="navbar-brand p-0">
-                <h3 class="ml-5 d-flex justify-content-center">CBU Admin</h3>
+                <h3 class="ml-5 d-flex justify-content-center">Admin</h3>
             </a>
             <div class="close-sidebar" data-toggle="left-sidebar-close">
                 <i class="ion-close-round"></i>
@@ -113,8 +113,7 @@
                             <span class="micon bi bi-textarea-resize"></span><span class="mtext">Data Website</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="{{ route('article.index') }}">Data Artikel</a></li>
-                            <li><a href="{{ route('dashboard.index') }}">Data Dashboard</a></li>
+                            <li><a href="{{ route('konfirmasi.index') }}">Data RSVP</a></li>
                         </ul>
                     </li>
                 </ul>

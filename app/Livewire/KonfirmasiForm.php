@@ -4,7 +4,6 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Konfirmasi;
-use Illuminate\Http\Request;
 
 
 class KonfirmasiForm extends Component

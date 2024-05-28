@@ -37,7 +37,7 @@
             <img src="{{ asset('img/right-flower.png') }}" alt="image-top-right" class="top-right-decoration">
             <img src="{{ asset('img/left-flower.png') }}" alt="image-top-left" class="top-left-decoration">
             <div class="title">
-                <h4>Kepada <span>Bapak/Ibu/Saudara/i, </span></h4>
+                <h4>Kepada Yth <span id="greeting">Bapak/Ibu/Saudara/i, </span></h4>
                 <h1>Irsalina Faradis</h1>
                 <h2>&</h2>
                 <h1>Mas'ud Sidik</h1>
@@ -49,7 +49,6 @@
             <div class="simply-countdown"></div>
             <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()">Lihat Undangan</a>
         </main>
-
     </section>
 
     <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
@@ -209,57 +208,9 @@
         </div>
     </section>
 
-    <section id="rsvp" class="rsvp">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-10 text-center">
-                    <h2>Ucapan & Doa</h2>
-                    <p>Berikan Doa dan Harapan terbaik untuk kami</p>
-                </div>
-            </div>
-
-            <form class="col col-cols-md-auto g-3 align-items-center justify-content-center rsvp-form" method="POST"
-                action="https://script.google.com/macros/s/AKfycbyddFbEJRqwEeA6OmZAuNf0jw_B30ZUOS5qSDwlAKV_nurcW7H6osJx2ZWnIeTmPm_35g/exec"
-                id="my-form">
-                <div class="col-12">
-                    <div class="mb-3">
-                        <label for="nama" class="form-label">Nama</label>
-                        <input type="text" class="form-control" id="nama" name="nama">
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="mb-3">
-                        <label for="jumlah" class="form-label">Jumlah</label>
-                        <textarea class="form-control" name="doa" id="" cols="30" rows="10"
-                            placeholder="Tuliskan ucapan dan doamu"></textarea>
-                    </div>
-                </div <div class="col-12" style="margin-top: 35px;">
-                <button class="btn btn-primary" style="width: 100%;">Kirim</button>
-        </div>
-        </form>
-
-        <div class="row justify-content-center ">
-            <div class="col-md-9 mt-5 col-sm-6 comment">
-                <div>
-                    <div class="d-flex flex-start align-items-center">
-                        <div>
-                            <h6 class="fw-bold text-white mb-1">Lily Coleman</h6>
-                            <p class="text-muted small mb-0" style="color:rgb(168, 163, 163) !important;">
-                                7 jam
-                            </p>
-                        </div>
-                    </div>
-                    <p class=" mb-4 pb-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip consequat.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        </div>
-    </section>
+    <div>
+        @livewire('komentar-form')
+    </div>
 
     <section id="gifts" class="gifts">
         <div class="container">
@@ -356,6 +307,18 @@
                 }
             },
         });
+    </script>
+
+    <script>
+        // Get the query parameter value
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const greeting = urlParams.get('to');
+
+        // Update the greeting text if a value is present
+        if (greeting) {
+            document.getElementById('greeting').innerText = greeting + ', ';
+        }
     </script>
 
     <script>

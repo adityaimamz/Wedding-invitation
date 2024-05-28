@@ -24,9 +24,9 @@
                     <div class="card-box height-100-p widget-style3">
                         <div class="d-flex flex-wrap">
                             <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">{{ \App\Models\article::all()->count() }}</div>
+                                <div class="weight-700 font-24 text-dark">{{ \App\Models\Konfirmasi::all()->count() }}</div>
                                 <div class="font-14 text-secondary weight-500">
-                                    Jumlah Artikel
+                                    Jumlah RSVP
                                 </div>
                             </div>
                             <div class="widget-icon">
